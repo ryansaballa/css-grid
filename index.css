@@ -114,27 +114,23 @@ img {
     }
     
     .technology {
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 5;
+        grid-column: 1 / span 7;
     }
     
     .environment {
-        grid-column: 6 / span 2;
-        grid-row: 1 / span 5;
+        grid-column: 8 / span 2;
     }
      
     .nasa {
-        grid-column: 8 / span 4;
-        grid-row: 1 / -1;
+        grid-column: 10 / -1;
+
     }
     
     .physics { 
         grid-column: 1 / span 3;
-        grid-row: 6 / -1;
     }
     
     .health {
-        grid-column: 4 / span 8;
-        grid-row: 6 / -1;
+        grid-column: 4 / span 6;
     }
 }
