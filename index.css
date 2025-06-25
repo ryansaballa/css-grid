@@ -4,6 +4,10 @@ html, body {
     font-family: 'Manrope', sans-serif;
 }
 
+body{
+    margin: 1em;
+}
+
 /* =================
     Grid Properties
    ================= */
@@ -12,6 +16,58 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
+    grid-template-areas: 
+        "tech"
+        "envi"
+        "nasa"
+        "phys"
+        "heal";     
+    
+}
+
+   .technology {
+    grid-area: tech;
+}
+
+.environment {
+    grid-area: envi;
+}
+
+.nasa {
+    grid-area: nasa;
+}
+
+.physics {
+    grid-area: phys;
+}
+
+.health {
+    grid-area: heal;
+}
+
+
+/* =================
+    Query 
+   ================= */
+
+@media (min-width: 500px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "tech tech"
+        "envi nasa"
+        "phys nasa"
+        "heal heal"
+    }
+}
+
+@media (min-width: 870px) {
+    main {
+        grid-template-columns: repeat(9, 1fr) repeat(3, minmax(70px, 1fr));
+        grid-template-areas: 
+            "tech tech tech tech tech tech envi envi envi nasa nasa nasa"
+            "phys phys phys heal heal heal heal heal heal nasa nasa nasa"
+    }
 }
 
 /* =================
@@ -89,48 +145,3 @@ img {
     border-top-right-radius: .2em;
 }
 
-/* =================
-    Images 
-   ================= */
-
-@media (min-width: 500px) {
-    main {
-        grid-template-columns: 1fr 1fr;
-    }
-    .technology {
-        grid-column: span 2;
-    }
-    .nasa {
-        grid-row: span 2;
-    }
-    .health {
-        grid-column: span 2;
-    }
-}
-
-@media (min-width: 870px) {
-    main {
-        grid-template-columns: repeat(12, 1fr);
-    }
-    
-    .technology {
-        grid-column: 1 / span 7;
-    }
-    
-    .environment {
-        grid-column: 8 / span 2;
-    }
-     
-    .nasa {
-        grid-column: 10 / -1;
-
-    }
-    
-    .physics { 
-        grid-column: 1 / span 3;
-    }
-    
-    .health {
-        grid-column: 4 / span 6;
-    }
-}
