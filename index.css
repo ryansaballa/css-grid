@@ -4,8 +4,28 @@ html, body {
     font-family: 'Manrope', sans-serif;
 }
 
-body{
-    margin: 1em;
+/* =================
+    Site Layout
+   ================= */
+
+body {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-areas: 
+        ". site-header ."
+        ". main ."
+        ". site-footer .";
+}
+
+.site-header {
+    grid-area: site-header;
+    
+}
+
+footer {
+    grid-area: site-footer;
+    
 }
 
 /* =================
@@ -13,6 +33,7 @@ body{
    ================= */
 
 main {
+    grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
