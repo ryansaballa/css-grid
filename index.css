@@ -10,12 +10,14 @@ html, body {
 
 body {
     display: grid;
-    gap: 1em;
+    gap: 1em 0;
     grid-template-columns: 1em 1fr 1em;
     grid-template-areas: 
+        " .  .  ."
         ". site-header ."
         ". main ."
-        ". site-footer .";
+        ". site-footer ."
+        " .  .  .";
 }
 
 .site-header {
